@@ -64,6 +64,6 @@ int main()
         }
         cout << endl;
     }
-    cout << " Я умера, но сделала... " << endl;
+    cout << " Я умерла, но сделала... " << endl;
     return 0;
 }
