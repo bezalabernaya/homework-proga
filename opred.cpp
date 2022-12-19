@@ -3,22 +3,20 @@
 #include<cmath>
 using namespace std;
 
-
-    //Возвращает матрицу matrix без row-ой строки и col-того столбца, результат в newMatrix
     void Minor(int** matrix, int size, int row, int col, int** newMatrix) {
-        int Row = 0; //Смещение индекса строки в матрице
-        int Col = 0; //Смещение индекса столбца в матрице
+        int Row = 0; 
+        int Col = 0; 
         for (int i = 0; i < size - 1; i++) {
             //Пропустить row-ую строку
             if (i == row) {
-                Row = 1; //Как только встретили строку, которую надо пропустить, делаем смещение для исходной матрицы
+                Row = 1; 
             }
 
-            Col = 0; //Обнулить смещение столбца
+            Col = 0;
             for (int j = 0; j < size - 1; j++) {
                 //Пропустить col-ый столбец
                 if (j == col) {
-                    Col = 1; //Встретили нужный столбец, проускаем его смещением
+                    Col = 1;
                 }
 
                 newMatrix[i][j] = matrix[i + Row][j + Col];
@@ -43,7 +41,7 @@ using namespace std;
                 newMatrix[i] = new int[size - 1];
             }
 
-            //Раскладываем по 0-ой строке, цикл бежит по столбцам
+           
             for (int j = 0; j < size; j++) {
                 
                 Minor(matrix, size, 0, j, newMatrix);
