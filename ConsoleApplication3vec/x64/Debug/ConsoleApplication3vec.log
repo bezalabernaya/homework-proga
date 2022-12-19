@@ -1,0 +1,5 @@
+﻿  Vector.cpp
+  main.cpp
+  Создание кода...
+C:\project1\ConsoleApplication3vec\Vector.cpp(66): warning C4715: Vector::operator/: значение возвращается не при всех путях выполнения
+  ConsoleApplication3vec.vcxproj -> C:\project1\ConsoleApplication3vec\x64\Debug\ConsoleApplication3vec.exe
